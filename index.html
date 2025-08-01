@@ -1,11 +1,275 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My GitHub Site</title>
-  </head>
-  <body>
-    <h1>Hello from GitHub Pages!</h1>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PivotalPoint.io – Consulting & CTO/CPO Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      background: #f6f8fb;
+      color: #222;
+    }
+    .hero {
+      position: relative;
+      background: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2832&auto=format&fit=crop') center/cover no-repeat;
+      min-height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(90deg, rgba(30,60,114,0.85) 0%, rgba(42,82,152,0.7) 100%);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      width: 100%;
+      padding: 60px 0 40px 0;
+    }
+    .hero h1 {
+      animation: fadeInDown 1s ease-out;
+
+      font-size: 3.2rem;
+      margin: 0 0 14px 0;
+      font-weight: 800;
+      letter-spacing: -2px;
+      text-shadow: 0 4px 24px rgba(0,0,0,0.20);
+    }
+    .hero p {
+      animation: fadeInUp 1s ease-out;
+
+      font-size: 1.35rem;
+      margin: 0 0 28px 0;
+      font-weight: 400;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.13);
+    }
+    .hero nav {
+      margin-top: 10px;
+    }
+    .hero nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 16px;
+      font-weight: 600;
+      font-size: 1.08rem;
+      transition: color 0.2s;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+    }
+    .hero nav a:hover {
+      color: #ffd700;
+      border-bottom: 2px solid #ffd700;
+    }
+
+    /* --- End Hero Styles --- */
+
+    nav {
+      margin-top: 15px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+    section {
+      max-width: 950px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 8px 32px rgba(30,60,114,0.07);
+      padding: 40px 30px;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 18px;
+      color: #1e3c72;
+      font-weight: 700;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 25px;
+    }
+    .service {
+      flex: 1 1 260px;
+      background: #f6f8fb;
+      border-radius: 10px;
+      padding: 24px 18px;
+      box-shadow: 0 2px 8px rgba(30,60,114,0.04);
+      min-width: 220px;
+    }
+    .service h3 {
+      color: #2a5298;
+      margin-top: 0;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+    .why {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-top: 20px;
+    }
+    .why-item {
+      flex: 1 1 200px;
+      background: #eaf1fb;
+      border-radius: 10px;
+      padding: 18px 14px;
+      min-width: 180px;
+      color: #1e3c72;
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      max-width: 410px;
+      margin: 0 auto;
+    }
+    .contact-form input, .contact-form textarea {
+      font-family: inherit;
+      font-size: 1rem;
+      padding: 10px;
+      border: 1px solid #c7d0e1;
+      border-radius: 6px;
+      background: #f6f8fb;
+      resize: vertical;
+    }
+    .contact-form button {
+      background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+      color: #fff;
+      border: none;
+      padding: 12px 0;
+      border-radius: 6px;
+      font-size: 1.08rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .contact-form button:hover {
+      background: #2a5298;
+    }
+    @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 700px) {
+      section { padding: 28px 8px; }
+      .services, .why { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>PivotalPoint.io</h1>
+      <p>Expert Consulting & CTO/CPO Leadership for Ambitious Companies</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#why">Why Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About PivotalPoint.io</h2>
+    <p>
+      PivotalPoint.io partners with startups and scale-ups to drive technology and product success. We bring decades of hands-on CTO/CPO experience, guiding organizations through growth, transformation, and innovation.
+    </p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service">
+        <div style="margin-bottom:10px;">
+          <svg width="36" height="36" fill="none" viewBox="0 0 36 36"><circle cx="18" cy="18" r="18" fill="#eaf1fb"/><path d="M12 26v-2a4 4 0 014-4h4a4 4 0 014 4v2" stroke="#2a5298" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="14" r="4" stroke="#2a5298" stroke-width="2"/></svg>
+        </div>
+        <h3>Executive Leadership & Strategy</h3>
+        <p>Interim & Fractional CTO/CPO engagements to set vision, scale teams, and drive your technology and product roadmap.</p>
+      </div>
+      <div class="service">
+        <div style="margin-bottom:10px;">
+          <svg width="36" height="36" fill="none" viewBox="0 0 36 36"><circle cx="18" cy="18" r="18" fill="#eaf1fb"/><path d="M22 12l-4.5 4.5M14 20l4.5-4.5m0 0L22 20l-4.5-4.5M14 12l4.5 4.5" stroke="#2a5298" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>AI & Digital Transformation</h3>
+        <p>Expert guidance on integrating AI, modernizing architecture, and optimizing processes to unlock competitive advantages.</p>
+      </div>
+      <div class="service">
+        <div style="margin-bottom:10px;">
+          <svg width="36" height="36" fill="none" viewBox="0 0 36 36"><circle cx="18" cy="18" r="18" fill="#eaf1fb"/><path d="M14 20l-4-4 4-4" stroke="#2a5298" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 20l-4-4 4-4" stroke="#2a5298" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Advisory & Due Diligence</h3>
+        <p>In-depth technical assessments, risk analysis, and strategic advice to support investment decisions and high-stakes projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="expertise">
+    <h2>Expertise</h2>
+    <ul style="max-width:700px;margin:28px auto 0 auto;padding:0 0 0 18px;font-size:1.13rem;line-height:1.7;color:#234;">
+      <li>Technology strategy and roadmap planning</li>
+      <li>Product management and delivery leadership</li>
+      <li>AI-driven transformation and innovation</li>
+      <li>Building and mentoring high-performing teams</li>
+      <li>Process improvement and agile transformation</li>
+      <li>Scaling operations and cloud migration</li>
+      <li>Digital transformation and modernization</li>
+      <li>Technical due diligence and risk assessment</li>
+      <li>Cross-functional and stakeholder collaboration</li>
+      <li>Budget and resource management</li>
+      <li>Regulatory and compliance oversight</li>
+      <li>Interim or fractional CTO/CPO engagements</li>
+    </ul>
+  </section>
+
+  <section id="why">
+    <h2>Why Choose Us?</h2>
+    <div class="why">
+      <div class="why-item">Decades of C-level experience</div>
+      <div class="why-item">Proven results across industries</div>
+      <div class="why-item">Hands-on, pragmatic approach</div>
+      <div class="why-item">Flexible engagement models</div>
+      <div class="why-item">Confidential & trusted partner</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form" name="contact" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="How can we help you?" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div style="text-align:center;margin-top:18px;color:#666;font-size:1rem;">
+      Or email us at <a href="mailto:hello@pivotalpoint.io" style="color:#2a5298;font-weight:600;">hello@pivotalpoint.io</a>
+    </div>
+  </section>
+
+  <footer style="text-align:center;padding:30px 0 20px 0;color:#aaa;font-size:0.98rem;">
+    &copy; 2025 PivotalPoint.io. All rights reserved.
+  </footer>
+</body>
 </html>
 
