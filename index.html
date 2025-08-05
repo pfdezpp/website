@@ -1,275 +1,499 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PivotalPoint.io – Consulting & CTO/CPO Services</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PivotalPoint.io helps startup founders fix and scale vibe-coded AI apps. Turn chaos into sustainable growth with professional architecture, prompt engineering, and cost optimization.">
+  <title>PivotalPoint.io | Fix Your Vibe-Coded AI App</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Inter', Arial, sans-serif;
-      background: #f6f8fb;
-      color: #222;
+      padding: 0;
+      box-sizing: border-box;
     }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0a0e1a;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    .animate-fade-in {
+      animation: fadeInUp 0.8s ease-out;
+    }
+    
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    /* Hero Section */
     .hero {
       position: relative;
-      background: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2832&auto=format&fit=crop') center/cover no-repeat;
-      min-height: 380px;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0a0e1a 0%, #1e3c72 50%, #2a5298 100%);
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       overflow: hidden;
     }
-    .hero-overlay {
+    
+    .hero::before {
+      content: '';
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: linear-gradient(90deg, rgba(30,60,114,0.85) 0%, rgba(42,82,152,0.7) 100%);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?q=80&w=2125&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.1;
       z-index: 1;
     }
+    
     .hero-content {
       position: relative;
       z-index: 2;
-      color: #fff;
-      width: 100%;
-      padding: 60px 0 40px 0;
+      max-width: 800px;
+      padding: 0 20px;
     }
+    
     .hero h1 {
-      animation: fadeInDown 1s ease-out;
-
-      font-size: 3.2rem;
-      margin: 0 0 14px 0;
+      font-size: 4rem;
       font-weight: 800;
-      letter-spacing: -2px;
-      text-shadow: 0 4px 24px rgba(0,0,0,0.20);
+      margin-bottom: 20px;
+      background: linear-gradient(45deg, #ff6b35, #f7931e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
+    
     .hero p {
-      animation: fadeInUp 1s ease-out;
-
-      font-size: 1.35rem;
-      margin: 0 0 28px 0;
-      font-weight: 400;
-      text-shadow: 0 2px 12px rgba(0,0,0,0.13);
+      font-size: 1.4rem;
+      margin-bottom: 40px;
+      opacity: 0.9;
+      line-height: 1.6;
     }
-    .hero nav {
-      margin-top: 10px;
-    }
-    .hero nav a {
+    
+    .cta-btn {
+      display: inline-block;
+      background: linear-gradient(45deg, #ff6b35, #f7931e);
       color: #fff;
+      padding: 18px 40px;
       text-decoration: none;
-      margin: 0 16px;
-      font-weight: 600;
-      font-size: 1.08rem;
-      transition: color 0.2s;
-      padding-bottom: 2px;
-      border-bottom: 2px solid transparent;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+      border: none;
+      cursor: pointer;
     }
-    .hero nav a:hover {
-      color: #ffd700;
-      border-bottom: 2px solid #ffd700;
+    
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(255, 107, 53, 0.4);
     }
-
-    /* --- End Hero Styles --- */
-
-    nav {
-      margin-top: 15px;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 18px;
-      font-weight: 600;
-      font-size: 1.05rem;
-      transition: color 0.2s;
-    }
-    nav a:hover {
-      color: #ffd700;
-    }
+    
+    /* Sections */
     section {
-      max-width: 950px;
-      margin: 50px auto;
-      background: #fff;
-      border-radius: 14px;
-      box-shadow: 0 8px 32px rgba(30,60,114,0.07);
-      padding: 40px 30px;
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 60px 40px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 18px;
-      color: #1e3c72;
-      font-weight: 700;
+    
+    h2 {
+      font-size: 2.5rem;
+      color: #fff;
+      margin-bottom: 40px;
+      text-align: center;
     }
-    .services {
-      display: flex;
-      flex-wrap: wrap;
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
-      margin-top: 25px;
+      margin-top: 40px;
     }
-    .service {
-      flex: 1 1 260px;
-      background: #f6f8fb;
-      border-radius: 10px;
-      padding: 24px 18px;
-      box-shadow: 0 2px 8px rgba(30,60,114,0.04);
-      min-width: 220px;
+    
+    .card {
+      padding: 30px;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
     }
-    .service h3 {
-      color: #2a5298;
-      margin-top: 0;
-      font-size: 1.2rem;
-      font-weight: 700;
+    
+    .card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     }
-    .why {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-      margin-top: 20px;
+    
+    .card-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      display: block;
     }
-    .why-item {
-      flex: 1 1 200px;
-      background: #eaf1fb;
-      border-radius: 10px;
-      padding: 18px 14px;
-      min-width: 180px;
-      color: #1e3c72;
-      font-weight: 600;
-      font-size: 1.05rem;
+    
+    .problem-card .card-icon {
+      color: #ff4757;
     }
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      max-width: 410px;
+    
+    .solution-card .card-icon {
+      color: #2ed573;
+    }
+    
+    .card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+    
+    .card p {
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+    
+    /* Contact Form */
+    .contact-section {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+    }
+    
+    .form-container {
+      max-width: 600px;
       margin: 0 auto;
     }
-    .contact-form input, .contact-form textarea {
-      font-family: inherit;
+    
+    .form-group {
+      margin-bottom: 25px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
       font-size: 1rem;
-      padding: 10px;
-      border: 1px solid #c7d0e1;
-      border-radius: 6px;
-      background: #f6f8fb;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+    
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #ff6b35;
+      background: rgba(255, 255, 255, 0.15);
+    }
+    
+    .form-group textarea {
+      height: 120px;
       resize: vertical;
     }
-    .contact-form button {
-      background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
-      color: #fff;
-      border: none;
-      padding: 12px 0;
-      border-radius: 6px;
-      font-size: 1.08rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background 0.2s;
+    
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #0a0e1a;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
-    .contact-form button:hover {
-      background: #2a5298;
-    }
-    @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    @media (max-width: 700px) {
-      section { padding: 28px 8px; }
-      .services, .why { flex-direction: column; }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.5rem; }
+      .hero p { font-size: 1.1rem; }
+      section { margin: 40px 20px; padding: 40px 20px; }
+      .grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>PivotalPoint.io</h1>
-      <p>Expert Consulting & CTO/CPO Leadership for Ambitious Companies</p>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#expertise">Expertise</a>
-        <a href="#why">Why Us</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+  <!-- Logo & Branding -->
+  <header style="position: absolute; top: 20px; left: 30px; z-index: 99;">
+    <a href="#" style="color: #fff; font-weight: 800; font-size: 1.4rem; text-decoration: none; letter-spacing: -0.5px;">
+      <i class="fas fa-bolt" style="margin-right: 8px; color: #ff6b35;"></i> PivotalPoint.io
+    </a>
   </header>
 
-  <section id="about">
-    <h2>About PivotalPoint.io</h2>
-    <p>
-      PivotalPoint.io partners with startups and scale-ups to drive technology and product success. We bring decades of hands-on CTO/CPO experience, guiding organizations through growth, transformation, and innovation.
-    </p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content animate-fade-in">
+      <h1>Fix Your Vibe-Coded AI App</h1>
+      <p>Your MVP took off—but now it's chaotic, costly, and impossible to scale.<br>We've been there, fixed that.</p>
+      <a href="#contact" class="cta-btn">Get Your App Back on Track</a>
+    </div>
   </section>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="service">
-        <div style="margin-bottom:10px;">
-          <svg width="36" height="36" fill="none" viewBox="0 0 36 36"><circle cx="18" cy="18" r="18" fill="#eaf1fb"/><path d="M12 26v-2a4 4 0 014-4h4a4 4 0 014 4v2" stroke="#2a5298" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="14" r="4" stroke="#2a5298" stroke-width="2"/></svg>
-        </div>
-        <h3>Executive Leadership & Strategy</h3>
-        <p>Interim & Fractional CTO/CPO engagements to set vision, scale teams, and drive your technology and product roadmap.</p>
+  <!-- Problems Section -->
+  <section class="animate-fade-in">
+    <h2>Does this sound familiar?</h2>
+    <div class="grid">
+      <div class="card problem-card">
+        <i class="fas fa-exclamation-triangle card-icon"></i>
+        <h3>Spaghetti Code Everywhere</h3>
+        <p>Your AI app is a tangled mess of quick fixes and patches. Every small change breaks something else, and debugging feels like navigating a maze.</p>
       </div>
-      <div class="service">
-        <div style="margin-bottom:10px;">
-          <svg width="36" height="36" fill="none" viewBox="0 0 36 36"><circle cx="18" cy="18" r="18" fill="#eaf1fb"/><path d="M22 12l-4.5 4.5M14 20l4.5-4.5m0 0L22 20l-4.5-4.5M14 12l4.5 4.5" stroke="#2a5298" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <h3>AI & Digital Transformation</h3>
-        <p>Expert guidance on integrating AI, modernizing architecture, and optimizing processes to unlock competitive advantages.</p>
+      <div class="card problem-card">
+        <i class="fas fa-dice card-icon"></i>
+        <h3>Unpredictable Behavior</h3>
+        <p>What worked perfectly yesterday randomly fails today. Your AI responses are inconsistent, and users are starting to complain about reliability.</p>
       </div>
-      <div class="service">
-        <div style="margin-bottom:10px;">
-          <svg width="36" height="36" fill="none" viewBox="0 0 36 36"><circle cx="18" cy="18" r="18" fill="#eaf1fb"/><path d="M14 20l-4-4 4-4" stroke="#2a5298" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 20l-4-4 4-4" stroke="#2a5298" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <h3>Advisory & Due Diligence</h3>
-        <p>In-depth technical assessments, risk analysis, and strategic advice to support investment decisions and high-stakes projects.</p>
+      <div class="card problem-card">
+        <i class="fas fa-chart-line card-icon"></i>
+        <h3>Scaling Nightmares</h3>
+        <p>API costs are ballooning, performance crumbles under load, and adding new features feels impossible. Growth has become your biggest enemy.</p>
       </div>
     </div>
   </section>
 
-  <section id="expertise">
-    <h2>Expertise</h2>
-    <ul style="max-width:700px;margin:28px auto 0 auto;padding:0 0 0 18px;font-size:1.13rem;line-height:1.7;color:#234;">
-      <li>Technology strategy and roadmap planning</li>
-      <li>Product management and delivery leadership</li>
-      <li>AI-driven transformation and innovation</li>
-      <li>Building and mentoring high-performing teams</li>
-      <li>Process improvement and agile transformation</li>
-      <li>Scaling operations and cloud migration</li>
-      <li>Digital transformation and modernization</li>
-      <li>Technical due diligence and risk assessment</li>
-      <li>Cross-functional and stakeholder collaboration</li>
-      <li>Budget and resource management</li>
-      <li>Regulatory and compliance oversight</li>
-      <li>Interim or fractional CTO/CPO engagements</li>
-    </ul>
-  </section>
-
-  <section id="why">
-    <h2>Why Choose Us?</h2>
-    <div class="why">
-      <div class="why-item">Decades of C-level experience</div>
-      <div class="why-item">Proven results across industries</div>
-      <div class="why-item">Hands-on, pragmatic approach</div>
-      <div class="why-item">Flexible engagement models</div>
-      <div class="why-item">Confidential & trusted partner</div>
+  <!-- Solutions Section -->
+  <section class="animate-fade-in">
+    <h2>We Turn Chaos Into Growth</h2>
+    <div class="grid">
+      <div class="card solution-card">
+        <i class="fas fa-cogs card-icon"></i>
+        <h3>Robust Architecture</h3>
+        <p>We refactor your app into clean, maintainable architecture with proper separation of concerns, error handling, and scalable patterns that grow with you.</p>
+      </div>
+      <div class="card solution-card">
+        <i class="fas fa-bullseye card-icon"></i>
+        <h3>Prompt Engineering</h3>
+        <p>Stop AI unpredictability with expertly crafted prompts, validation systems, and fallback mechanisms that ensure consistent, reliable responses.</p>
+      </div>
+      <div class="card solution-card">
+        <i class="fas fa-piggy-bank card-icon"></i>
+        <h3>Cost Optimization</h3>
+        <p>Reduce your LLM costs by up to 70% through intelligent caching, request optimization, model selection, and efficient API usage patterns.</p>
+      </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form class="contact-form" name="contact" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="contact" />
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="How can we help you?" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <div style="text-align:center;margin-top:18px;color:#666;font-size:1rem;">
-      Or email us at <a href="mailto:hello@pivotalpoint.io" style="color:#2a5298;font-weight:600;">hello@pivotalpoint.io</a>
+  <!-- Who We Are Section -->
+  <section class="animate-fade-in">
+    <h2>Who We Are</h2>
+    <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem; line-height: 1.8; opacity: 0.95;">
+      <p>PivotalPoint is a boutique AI engineering firm led by former CTOs and technical product leads from Google, Trilogy, and many other companies—from startups to consolidated tech firms. We specialize in rescuing LLM-powered products that were built fast—and built wrong.</p>
+      <p>We don't just fix your code—we enable your team to grow again, reduce LLM burn, and move faster with confidence. Whether you're trying to stabilize, scale, or sell, we've seen your chaos—and turned it into opportunity.</p>
     </div>
   </section>
 
-  <footer style="text-align:center;padding:30px 0 20px 0;color:#aaa;font-size:0.98rem;">
-    &copy; 2025 PivotalPoint.io. All rights reserved.
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section animate-fade-in">
+    <h2>Ready to Fix Your App?</h2>
+    <p style="text-align: center; margin-bottom: 40px; font-size: 1.1rem;">Use our contact form below.</p>
+    
+    <div class="form-container">
+      <form id="contactForm" method="POST" action="https://formspree.io/f/mdkdwpee" data-netlify="true" name="contact">
+        <input type="hidden" name="form-name" value="contact">
+        
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        
+        <div class="form-group">
+          <input type="text" name="company" placeholder="Company Name (Optional)">
+        </div>
+        
+        <div class="form-group">
+          <textarea name="message" placeholder="Tell us about your AI app challenges..." required></textarea>
+        </div>
+        
+        <div style="text-align: center;">
+          <button type="submit" class="cta-btn">
+            <i class="fas fa-paper-plane" style="margin-right: 8px;"></i>
+            Send Message
+          </button>
+        </div>
+      </form>
+      
+      <div id="form-status" style="margin-top: 20px; text-align: center; display: none;"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 PivotalPoint.io. All rights reserved.</p>
+    <p style="margin-top: 10px; opacity: 0.7;">Turning AI chaos into sustainable growth.</p>
   </footer>
+
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe all sections for scroll animations
+    document.querySelectorAll('section').forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(30px)';
+      section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+      observer.observe(section);
+    });
+
+    // Form handling with Formspree
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('form-status');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        
+        // Get form data
+        const formData = new FormData(contactForm);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const message = formData.get('message');
+        
+        // Basic validation
+        if (!name || !email || !message) {
+          formStatus.innerHTML = '<div style="color: #ff4757; padding: 15px; background: rgba(255, 71, 87, 0.1); border-radius: 8px; border: 1px solid rgba(255, 71, 87, 0.3);"><i class="fas fa-exclamation-circle" style="margin-right: 8px;"></i>Please fill in all required fields.</div>';
+          formStatus.style.display = 'block';
+          return;
+        }
+        
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          formStatus.innerHTML = '<div style="color: #ff4757; padding: 15px; background: rgba(255, 71, 87, 0.1); border-radius: 8px; border: 1px solid rgba(255, 71, 87, 0.3);"><i class="fas fa-exclamation-circle" style="margin-right: 8px;"></i>Please enter a valid email address.</div>';
+          formStatus.style.display = 'block';
+          return;
+        }
+        
+        // Show loading state
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 8px;"></i>Sending...';
+        submitBtn.disabled = true;
+        
+        try {
+          const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+          
+          if (response.ok) {
+            formStatus.innerHTML = '<div style="color: #2ed573; padding: 15px; background: rgba(46, 213, 115, 0.1); border-radius: 8px; border: 1px solid rgba(46, 213, 115, 0.3);"><i class="fas fa-check-circle" style="margin-right: 8px;"></i>Thank you! Your message has been sent successfully. We\'ll get back to you soon.</div>';
+            formStatus.style.display = 'block';
+            contactForm.reset();
+          } else {
+            const data = await response.json();
+            throw new Error(data.error || 'Something went wrong');
+          }
+        } catch (error) {
+          formStatus.innerHTML = '<div style="color: #ff4757; padding: 15px; background: rgba(255, 71, 87, 0.1); border-radius: 8px; border: 1px solid rgba(255, 71, 87, 0.3);"><i class="fas fa-exclamation-circle" style="margin-right: 8px;"></i>Sorry, there was an error sending your message. Please try again or email us directly at contact@pivotalpoint.io</div>';
+          formStatus.style.display = 'block';
+        } finally {
+          // Reset button
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+        }
+      });
+    }
+
+    // Add floating animation to cards on hover
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px) scale(1.02)';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+      });
+    });
+
+    // Parallax effect removed to prevent content overlap
+
+    // Add typing effect to hero title (optional enhancement)
+    const heroTitle = document.querySelector('.hero h1');
+    if (heroTitle) {
+      const text = heroTitle.textContent;
+      heroTitle.textContent = '';
+      let i = 0;
+      
+      const typeWriter = () => {
+        if (i < text.length) {
+          heroTitle.textContent += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, 100);
+        }
+      };
+      
+      // Start typing effect after a short delay
+      setTimeout(typeWriter, 500);
+    }
+  </script>
 </body>
 </html>
-
