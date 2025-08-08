@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Support for PivotalPoint.io App Store - Get help with your AI applications and tools">
+  <title>Support | PivotalPoint.io App Store</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0a0e1a;
+      color: #fff;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    header {
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.4rem;
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    
+    .logo i {
+      margin-right: 8px;
+      color: #ff6b35;
+    }
+    
+    .nav-link {
+      color: #fff;
+      text-decoration: none;
+      opacity: 0.8;
+      transition: opacity 0.3s;
+    }
+    
+    .nav-link:hover {
+      opacity: 1;
+    }
+    
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+      background: linear-gradient(135deg, #1a1f2e 0%, #0a0e1a 100%);
+    }
+    
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #ff6b35, #f7931e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .support-content {
+      padding: 60px 0;
+    }
+    
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+    
+    .support-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 30px;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+    
+    .support-card:hover {
+      transform: translateY(-5px);
+      border-color: #ff6b35;
+    }
+    
+    .support-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: #ff6b35;
+    }
+    
+    .support-card i {
+      font-size: 2rem;
+      color: #ff6b35;
+      margin-bottom: 20px;
+    }
+    
+    .support-card p {
+      opacity: 0.8;
+      margin-bottom: 20px;
+    }
+    
+    .support-card ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .support-card li {
+      padding: 8px 0;
+      padding-left: 20px;
+      position: relative;
+      opacity: 0.8;
+    }
+    
+    .support-card li:before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #ff6b35;
+    }
+    
+    .contact-section {
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 12px;
+      padding: 40px;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .contact-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #ff6b35;
+    }
+    
+    .contact-methods {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+    
+    .contact-method {
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    
+    .contact-method:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+    
+    .contact-method i {
+      font-size: 1.5rem;
+      color: #ff6b35;
+      margin-bottom: 10px;
+    }
+    
+    .contact-method h4 {
+      margin-bottom: 10px;
+    }
+    
+    .contact-method a {
+      color: #fff;
+      text-decoration: none;
+      opacity: 0.8;
+    }
+    
+    .contact-method a:hover {
+      opacity: 1;
+      color: #ff6b35;
+    }
+    
+    .faq-section {
+      margin-bottom: 60px;
+    }
+    
+    .faq-section h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #ff6b35;
+    }
+    
+    .faq-item {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+    
+    .faq-question {
+      padding: 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.3s;
+    }
+    
+    .faq-question:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+    
+    .faq-question h4 {
+      margin: 0;
+    }
+    
+    .faq-answer {
+      padding: 0 20px 20px;
+      opacity: 0.8;
+      display: none;
+    }
+    
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+    
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+    
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #0a0e1a;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .support-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .contact-methods {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="/" class="logo">
+          <i class="fas fa-bolt"></i> PivotalPoint.io
+        </a>
+        <a href="/" class="nav-link">← Back to Home</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>App Store Support</h1>
+      <p>Get help with your AI applications, troubleshoot issues, and find resources to optimize your experience</p>
+    </div>
+  </section>
+
+  <section class="support-content">
+    <div class="container">
+      <div class="support-grid">
+        <div class="support-card">
+          <i class="fas fa-download"></i>
+          <h3>Installation & Setup</h3>
+          <p>Having trouble installing or setting up your AI applications?</p>
+          <ul>
+            <li>Check system requirements</li>
+            <li>Verify API keys and credentials</li>
+            <li>Review installation logs</li>
+            <li>Ensure proper dependencies</li>
+          </ul>
+        </div>
+
+        <div class="support-card">
+          <i class="fas fa-exclamation-triangle"></i>
+          <h3>Common Issues</h3>
+          <p>Quick fixes for the most frequent problems:</p>
+          <ul>
+            <li>App crashes or freezes</li>
+            <li>Performance optimization</li>
+            <li>Memory usage issues</li>
+            <li>API rate limiting</li>
+          </ul>
+        </div>
+
+        <div class="support-card">
+          <i class="fas fa-cogs"></i>
+          <h3>Configuration Help</h3>
+          <p>Need help configuring your AI applications?</p>
+          <ul>
+            <li>Prompt engineering guidance</li>
+            <li>Model parameter tuning</li>
+            <li>Cost optimization settings</li>
+            <li>Integration with existing systems</li>
+          </ul>
+        </div>
+
+        <div class="support-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Security & Privacy</h3>
+          <p>Protecting your data and ensuring secure operations:</p>
+          <ul>
+            <li>Data encryption and storage</li>
+            <li>API security best practices</li>
+            <li>Privacy compliance</li>
+            <li>Access control management</li>
+          </ul>
+        </div>
+
+        <div class="support-card">
+          <i class="fas fa-chart-line"></i>
+          <h3>Performance & Scaling</h3>
+          <p>Optimize your applications for better performance:</p>
+          <ul>
+            <li>Monitoring and analytics</li>
+            <li>Load balancing strategies</li>
+            <li>Caching implementations</li>
+            <li>Resource allocation</li>
+          </ul>
+        </div>
+
+        <div class="support-card">
+          <i class="fas fa-code"></i>
+          <h3>Development Resources</h3>
+          <p>Tools and documentation for developers:</p>
+          <ul>
+            <li>API documentation</li>
+            <li>Code examples and templates</li>
+            <li>Best practices guides</li>
+            <li>Community forums</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contact-section">
+        <h2>Still Need Help?</h2>
+        <p>Our team is here to help you succeed with your AI applications</p>
+        
+        <div class="contact-methods">
+          <div class="contact-method">
+            <i class="fas fa-envelope"></i>
+            <h4>Email Support</h4>
+            <p><a href="mailto:support@pivotalpoint.io">support@pivotalpoint.io</a></p>
+            <p>We'll get back to you soon</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 PivotalPoint.io. All rights reserved.</p>
+      <p style="margin-top: 10px; opacity: 0.7;">Turning AI chaos into sustainable growth.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Add smooth scroll behavior
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
