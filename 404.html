@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Page not found - PivotalPoint.io">
+  <title>404 - Page Not Found | PivotalPoint.io</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0a0e1a;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    .animate-fade-in {
+      animation: fadeInUp 0.8s ease-out;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    header {
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.4rem;
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    
+    .logo i {
+      margin-right: 8px;
+      color: #ff6b35;
+    }
+    
+    .nav-link {
+      color: #fff;
+      text-decoration: none;
+      opacity: 0.8;
+      transition: opacity 0.3s;
+    }
+    
+    .nav-link:hover {
+      opacity: 1;
+    }
+    
+    .error-content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 0;
+      text-align: center;
+    }
+    
+    .error-container {
+      max-width: 600px;
+    }
+    
+    .error-code {
+      font-size: 8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #ff6b35, #f7931e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+      animation: pulse 2s infinite;
+    }
+    
+    .error-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    
+    .error-message {
+      font-size: 1.2rem;
+      opacity: 0.8;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+    
+    .error-actions {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 15px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, #ff6b35, #f7931e);
+      color: #fff;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+    }
+    
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+    }
+    
+    .btn i {
+      margin-right: 8px;
+    }
+    
+    .cosmic-elements {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: -1;
+    }
+    
+    .cosmic-element {
+      position: absolute;
+      color: rgba(255, 107, 53, 0.1);
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    .cosmic-element:nth-child(1) {
+      top: 20%;
+      left: 10%;
+      font-size: 2rem;
+      animation-delay: 0s;
+    }
+    
+    .cosmic-element:nth-child(2) {
+      top: 60%;
+      right: 15%;
+      font-size: 1.5rem;
+      animation-delay: 2s;
+    }
+    
+    .cosmic-element:nth-child(3) {
+      bottom: 30%;
+      left: 20%;
+      font-size: 1.8rem;
+      animation-delay: 4s;
+    }
+    
+    .cosmic-element:nth-child(4) {
+      top: 40%;
+      right: 30%;
+      font-size: 1.2rem;
+      animation-delay: 1s;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #0a0e1a;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    @media (max-width: 768px) {
+      .error-code {
+        font-size: 5rem;
+      }
+      
+      .error-title {
+        font-size: 2rem;
+      }
+      
+      .error-message {
+        font-size: 1rem;
+      }
+      
+      .error-actions {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .btn {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cosmic-elements">
+    <div class="cosmic-element"><i class="fas fa-star"></i></div>
+    <div class="cosmic-element"><i class="fas fa-moon"></i></div>
+    <div class="cosmic-element"><i class="fas fa-sun"></i></div>
+    <div class="cosmic-element"><i class="fas fa-bolt"></i></div>
+  </div>
+
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="/" class="logo">
+          <i class="fas fa-bolt"></i> PivotalPoint.io
+        </a>
+        <a href="/" class="nav-link">← Back to Home</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="error-content">
+    <div class="container">
+      <div class="error-container animate-fade-in">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Page Lost in the Cosmos</h1>
+        <p class="error-message">
+          Oops! It seems this page has drifted into another dimension. Even Irma can't locate it in the cosmic database. 
+          Don't worry though—the universe has a way of guiding us back to where we need to be.
+        </p>
+        
+        <div class="error-actions">
+          <a href="/" class="btn btn-primary">
+            <i class="fas fa-home"></i>
+            Return Home
+          </a>
+          <a href="support.html" class="btn btn-secondary">
+            <i class="fas fa-life-ring"></i>
+            Get Support
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 PivotalPoint.io. All rights reserved.</p>
+      <p style="margin-top: 10px; opacity: 0.7;">Turning AI chaos into sustainable growth.</p>
+      <p style="margin-top: 15px;">
+        <a href="support.html" style="color: #ff6b35; text-decoration: none; opacity: 0.8; transition: opacity 0.3s; margin-right: 20px;">
+          <i class="fas fa-life-ring" style="margin-right: 5px;"></i>Support
+        </a>
+        <a href="privacy.html" style="color: #ff6b35; text-decoration: none; opacity: 0.8; transition: opacity 0.3s;">
+          <i class="fas fa-shield-alt" style="margin-right: 5px;"></i>Privacy
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Add smooth scroll behavior
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add some interactive cosmic elements
+    document.addEventListener('mousemove', function(e) {
+      const cosmicElements = document.querySelectorAll('.cosmic-element');
+      cosmicElements.forEach((element, index) => {
+        const speed = (index + 1) * 0.01;
+        const x = e.clientX * speed;
+        const y = e.clientY * speed;
+        element.style.transform = `translate(${x}px, ${y}px)`;
+      });
+    });
+  </script>
+</body>
+</html>
