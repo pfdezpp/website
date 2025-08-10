@@ -368,13 +368,13 @@
   </section>
 
   <footer>
+    <div class="footer-links">
+      <a href="support.html"><i class="fas fa-life-ring" style="margin-right: 5px;"></i>Support</a>
+      <a href="privacy.html"><i class="fas fa-shield-alt" style="margin-right: 5px;"></i>Privacy Policy</a>
+      <a href="copyright.html"><i class="fas fa-copyright" style="margin-right: 5px;"></i>Copyright</a>
+    </div>
     <p>&copy; 2025 PivotalPoint.io. All rights reserved.</p>
     <p style="margin-top: 10px; opacity: 0.7;">Turning AI chaos into sustainable growth.</p>
-    <p style="margin-top: 15px;">
-      <a href="support.html" style="color: #ff6b35; text-decoration: none; opacity: 0.8; transition: opacity 0.3s;">
-        <i class="fas fa-life-ring" style="margin-right: 5px;"></i>Support
-      </a>
-    </p>
   </footer>
 
   <script>
@@ -469,7 +469,7 @@
             throw new Error(data.error || 'Something went wrong');
           }
         } catch (error) {
-          formStatus.innerHTML = '<div style="color: #ff4757; padding: 15px; background: rgba(255, 71, 87, 0.1); border-radius: 8px; border: 1px solid rgba(255, 71, 87, 0.3);"><i class="fas fa-exclamation-circle" style="margin-right: 8px;"></i>Sorry, there was an error sending your message. Please try again or email us directly at contact@pivotalpoint.io</div>';
+          formStatus.innerHTML = '<div style="color: #ff4757; padding: 15px; background: rgba(255, 71, 87, 0.1); border-radius: 8px; border: 1px solid rgba(255, 71, 87, 0.3);"><i class="fas fa-exclamation-circle" style="margin-right: 8px;"></i>Sorry, there was an error sending your message. Please try again or use our <a href="support.html" style="color: #ff6b35;">support page</a></div>';
           formStatus.style.display = 'block';
         } finally {
           // Reset button
