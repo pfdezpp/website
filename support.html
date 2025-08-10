@@ -7,85 +7,17 @@
   <title>Support | PivotalPoint.io App Store</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-57SLGV95');</script>
+  <!-- End Google Tag Manager -->
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #0a0e1a;
-      color: #fff;
-      line-height: 1.6;
-    }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    header {
-      padding: 20px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .logo {
-      color: #fff;
-      font-weight: 800;
-      font-size: 1.4rem;
-      text-decoration: none;
-      letter-spacing: -0.5px;
-    }
-    
-    .logo i {
-      margin-right: 8px;
-      color: #ff6b35;
-    }
-    
-    .nav-link {
-      color: #fff;
-      text-decoration: none;
-      opacity: 0.8;
-      transition: opacity 0.3s;
-    }
-    
-    .nav-link:hover {
-      opacity: 1;
-    }
-    
-    .hero {
-      padding: 80px 0 60px;
-      text-align: center;
-      background: linear-gradient(135deg, #1a1f2e 0%, #0a0e1a 100%);
-    }
-    
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 800;
-      margin-bottom: 20px;
-      background: linear-gradient(135deg, #ff6b35, #f7931e);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    
-    .hero p {
-      font-size: 1.2rem;
-      opacity: 0.8;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    
+    /* Support page specific styles */
     .support-content {
       padding: 60px 0;
     }
@@ -146,20 +78,6 @@
       color: #ff6b35;
     }
     
-    .contact-section {
-      background: rgba(255, 255, 255, 0.03);
-      border-radius: 12px;
-      padding: 40px;
-      text-align: center;
-      margin-bottom: 60px;
-    }
-    
-    .contact-section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #ff6b35;
-    }
-    
     .contact-methods {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -199,67 +117,7 @@
       color: #ff6b35;
     }
     
-    .faq-section {
-      margin-bottom: 60px;
-    }
-    
-    .faq-section h2 {
-      font-size: 2rem;
-      margin-bottom: 30px;
-      text-align: center;
-      color: #ff6b35;
-    }
-    
-    .faq-item {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 8px;
-      margin-bottom: 15px;
-      overflow: hidden;
-    }
-    
-    .faq-question {
-      padding: 20px;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: background 0.3s;
-    }
-    
-    .faq-question:hover {
-      background: rgba(255, 255, 255, 0.08);
-    }
-    
-    .faq-question h4 {
-      margin: 0;
-    }
-    
-    .faq-answer {
-      padding: 0 20px 20px;
-      opacity: 0.8;
-      display: none;
-    }
-    
-    .faq-item.active .faq-answer {
-      display: block;
-    }
-    
-    .faq-item.active .faq-question i {
-      transform: rotate(180deg);
-    }
-    
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      background: #0a0e1a;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
     @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-      
       .support-grid {
         grid-template-columns: 1fr;
       }
@@ -271,6 +129,10 @@
   </style>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57SLGV95"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <header>
     <div class="container">
       <div class="header-content">
@@ -365,8 +227,8 @@
         </div>
       </div>
 
-      <div class="contact-section">
-        <h2>Still Need Help?</h2>
+      <div class="contact-info">
+        <h3>Still Need Help?</h3>
         <p>Our team is here to help you succeed with your AI applications</p>
         
         <div class="contact-methods">
