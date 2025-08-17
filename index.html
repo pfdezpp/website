@@ -268,7 +268,7 @@
     </a>
     <nav style="display: flex; gap: 25px;">
       <a href="playbook.html" style="color: #fff; text-decoration: none; font-weight: 600; opacity: 0.9; font-size: 0.9rem; transition: opacity 0.3s ease;">Playbook</a>
-      <a href="#pricing" style="color: #fff; text-decoration: none; font-weight: 600; opacity: 0.9; font-size: 0.9rem; transition: opacity 0.3s ease;">Pricing</a>
+      <a href="#pricing" style="color: #fff; text-decoration: none; font-weight: 600; opacity: 0.9; font-size: 0.9rem; transition: opacity 0.3s ease;" title="AI App Fixing Pricing - $25K to $60K Professional Services">Pricing</a>
       <a href="#contact" style="color: #fff; text-decoration: none; font-weight: 600; opacity: 0.9; font-size: 0.9rem; transition: opacity 0.3s ease;">Contact</a>
     </nav>
   </header>
@@ -360,23 +360,24 @@
   </section>
 
   <!-- Pricing Section -->
-  <section id="pricing" class="animate-fade-in">
+  <section id="pricing" class="animate-fade-in" itemscope itemtype="https://schema.org/PriceSpecification">
     <h2>Simple, Clear Pricing</h2>
     <p style="text-align: center; font-size: 1.1rem; margin-bottom: 50px; opacity: 0.9;">Choose based on your app size. No hidden fees, no surprises.</p>
     
     <div class="grid">
-      <div class="card solution-card">
+      <div class="card solution-card" itemscope itemtype="https://schema.org/Offer">
         <div style="height: 30px; margin-bottom: 15px;"></div>
         <div style="display: flex; align-items: center; margin-bottom: 20px;">
           <i class="fas fa-seedling card-icon" style="margin-right: 15px; margin-bottom: 0;"></i>
-          <h3 style="margin: 0;">Small App</h3>
+          <h3 style="margin: 0;" itemprop="name">Small App</h3>
         </div>
         <div style="height: 60px; display: flex; align-items: center;">
-          <p style="font-size: 0.9rem; opacity: 0.8; margin: 0;">Solo founder, <1K users, simple features</p>
+          <p style="font-size: 0.9rem; opacity: 0.8; margin: 0;" itemprop="description">Solo founder, <1K users, simple features</p>
         </div>
         <div style="height: 80px; display: flex; flex-direction: column; justify-content: center;">
-          <div style="margin-bottom: 15px; font-size: 1.2rem; font-weight: 600;">$25K</div>
+          <div style="margin-bottom: 15px; font-size: 1.2rem; font-weight: 600;" itemprop="price" content="30000">$30K</div>
           <div style="opacity: 0.9; font-size: 0.9rem;">Complete 4-step methodology:<br>Diagnose → Stabilize → Optimize → Scale</div>
+          <meta itemprop="priceCurrency" content="USD">
         </div>
         <div style="text-align: center; margin-top: 20px;">
           <a href="#contact" class="cta-btn" style="display: inline-block; font-size: 0.9rem; padding: 12px 24px;">
@@ -384,19 +385,19 @@
           </a>
         </div>
       </div>
-      
-      <div class="card solution-card" style="border: 2px solid #ff6b35; transform: scale(1.05);">
+      <div class="card solution-card" style="border: 2px solid #ff6b35; transform: scale(1.05);" itemscope itemtype="https://schema.org/Offer">
         <div style="background: #ff6b35; color: white; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; text-align: center; margin-bottom: 15px;">Most Popular</div>
         <div style="display: flex; align-items: center; margin-bottom: 20px;">
           <i class="fas fa-rocket card-icon" style="margin-right: 15px; margin-bottom: 0;"></i>
-          <h3 style="color: #ff6b35; margin: 0;">Medium App</h3>
+          <h3 style="color: #ff6b35; margin: 0;" itemprop="name">Medium App</h3>
         </div>
         <div style="height: 60px; display: flex; align-items: center;">
-          <p style="font-size: 0.9rem; opacity: 0.8; margin: 0;">Small team, 1K-10K users, multiple features</p>
+          <p style="font-size: 0.9rem; opacity: 0.8; margin: 0;" itemprop="description">Small team, 1K-10K users, multiple features</p>
         </div>
         <div style="height: 80px; display: flex; flex-direction: column; justify-content: center;">
-          <div style="margin-bottom: 15px; font-size: 1.2rem; font-weight: 600;">$40K</div>
+          <div style="margin-bottom: 15px; font-size: 1.2rem; font-weight: 600;" itemprop="price" content="50000">$50K</div>
           <div style="opacity: 0.9; font-size: 0.9rem;">Complete 4-step methodology:<br>Diagnose → Stabilize → Optimize → Scale</div>
+          <meta itemprop="priceCurrency" content="USD">
         </div>
         <div style="text-align: center; margin-top: 20px;">
           <a href="#contact" class="cta-btn" style="display: inline-block; font-size: 0.9rem; padding: 12px 24px;">
@@ -404,19 +405,18 @@
           </a>
         </div>
       </div>
-      
-      <div class="card solution-card">
+      <div class="card solution-card" itemscope itemtype="https://schema.org/Offer">
         <div style="height: 30px; margin-bottom: 15px;"></div>
         <div style="display: flex; align-items: center; margin-bottom: 20px;">
           <i class="fas fa-building card-icon" style="margin-right: 15px; margin-bottom: 0;"></i>
-          <h3 style="margin: 0;">Large App</h3>
+          <h3 style="margin: 0;" itemprop="name">Large App</h3>
         </div>
         <div style="height: 60px; display: flex; align-items: center;">
-          <p style="font-size: 0.9rem; opacity: 0.8; margin: 0;">Team of 3+, 10K+ users, complex workflows</p>
+          <p style="font-size: 0.9rem; opacity: 0.8; margin: 0;" itemprop="description">Team of 3+, 10K+ users, complex workflows</p>
         </div>
         <div style="height: 80px; display: flex; flex-direction: column; justify-content: center;">
-          <div style="margin-bottom: 15px; font-size: 1.2rem; font-weight: 600;">$60K</div>
-          <div style="opacity: 0.9; font-size: 0.9rem;">Complete 4-step methodology:<br>Diagnose → Stabilize → Optimize → Scale</div>
+          <div style="margin-bottom: 15px; font-size: 1.2rem; font-weight: 600; color: #ff6b35;">Contact Us</div>
+          <div style="opacity: 0.9; font-size: 0.9rem;">Custom pricing for enterprise-level applications</div>
         </div>
         <div style="text-align: center; margin-top: 20px;">
           <a href="#contact" class="cta-btn" style="display: inline-block; font-size: 0.9rem; padding: 12px 24px;">
