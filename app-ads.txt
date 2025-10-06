@@ -1,5 +1,1 @@
-# app-ads.txt for PivotalPoint.io
-# This file declares authorized digital sellers for mobile app advertising
-# Format: <DOMAIN>, <PUBLISHER_ID>, <RELATIONSHIP>, <CERTIFICATION_AUTHORITY_ID>
-
 google.com, pub-8418855924005285, DIRECT, f08c47fec0942fa0
