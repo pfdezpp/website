@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HellPlate Support - Get help with the AI food roasting app">
+  <title>Support | HellPlate</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-57SLGV95');</script>
+  <!-- End Google Tag Manager -->
+  <style>
+    .support-content {
+      padding: 60px 0;
+    }
+    
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+    
+    .support-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 30px;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+    
+    .support-card:hover {
+      transform: translateY(-5px);
+      border-color: #ff6b35;
+    }
+    
+    .support-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: #ff6b35;
+    }
+    
+    .support-card i {
+      font-size: 2rem;
+      color: #ff6b35;
+      margin-bottom: 20px;
+      display: block;
+    }
+    
+    .support-card p {
+      opacity: 0.8;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    
+    .support-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0;
+    }
+    
+    .support-card li {
+      padding: 8px 0;
+      padding-left: 20px;
+      position: relative;
+      opacity: 0.8;
+    }
+    
+    .support-card li:before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #ff6b35;
+    }
+    
+    .form-section {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 40px;
+      margin-top: 40px;
+    }
+    
+    .form-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #ff6b35;
+      text-align: center;
+    }
+    
+    .form-section p {
+      text-align: center;
+      opacity: 0.8;
+      margin-bottom: 30px;
+    }
+    
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #fff;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid rgba(255, 107, 53, 0.3);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #ff6b35;
+      background: rgba(255, 255, 255, 0.08);
+    }
+    
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    
+    select {
+      cursor: pointer;
+    }
+    
+    select option {
+      background: #1a1f2e;
+      color: #fff;
+    }
+    
+    .submit-btn {
+      background: linear-gradient(135deg, #ff6b35, #f7931e);
+      color: white;
+      border: none;
+      padding: 14px 30px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+    }
+    
+    @media (max-width: 768px) {
+      .support-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .form-section {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57SLGV95"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+  <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(10, 14, 26, 0.95); backdrop-filter: blur(10px); padding: 15px 30px; display: flex; justify-content: space-between; align-items: center;">
+    <a href="index.html" style="color: #fff; font-weight: 800; font-size: 1.4rem; text-decoration: none; letter-spacing: -0.5px;">
+      <i class="fas fa-bolt" style="margin-right: 8px; color: #ff6b35;"></i> PivotalPoint.io
+    </a>
+    <nav style="display: flex; gap: 25px;">
+      <a href="index.html" style="color: #fff; text-decoration: none; font-weight: 600; opacity: 0.9; font-size: 0.9rem; transition: opacity 0.3s ease;">Home</a>
+      <a href="projects.html" style="color: #fff; text-decoration: none; font-weight: 600; opacity: 0.9; font-size: 0.9rem; transition: opacity 0.3s ease;">Projects</a>
+      <a href="playbook.html" style="color: #fff; text-decoration: none; font-weight: 600; opacity: 0.9; font-size: 0.9rem; transition: opacity 0.3s ease;">Playbook</a>
+      <a href="index.html#pricing" style="color: #fff; text-decoration: none; font-weight: 600; opacity: 0.9; font-size: 0.9rem; transition: opacity 0.3s ease;">Pricing</a>
+      <a href="index.html#contact" style="color: #fff; text-decoration: none; font-weight: 600; opacity: 0.9; font-size: 0.9rem; transition: opacity 0.3s ease;">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" style="padding-top: 120px;">
+    <div class="container">
+      <h1>HellPlate Support</h1>
+      <p>Get help with the AI food roasting app</p>
+    </div>
+  </section>
+
+  <section class="support-content">
+    <div class="container">
+      <div class="support-grid">
+        <div class="support-card">
+          <i class="fas fa-camera"></i>
+          <h3>Photo Issues</h3>
+          <p>Having trouble with camera access or photo uploads?</p>
+          <ul>
+            <li>Check camera permissions in device settings</li>
+            <li>Ensure good lighting for best results</li>
+            <li>Try clearing app cache if uploads fail</li>
+            <li>Make sure you have a stable internet connection</li>
+          </ul>
+        </div>
+
+        <div class="support-card">
+          <i class="fas fa-coins"></i>
+          <h3>Credits & Purchases</h3>
+          <p>Questions about credits or in-app purchases?</p>
+          <ul>
+            <li>Credits are added immediately after purchase</li>
+            <li>Check your purchase history in the app</li>
+            <li>Restore purchases if switching devices</li>
+            <li>Contact us if credits don't appear</li>
+          </ul>
+        </div>
+
+        <div class="support-card">
+          <i class="fas fa-fire"></i>
+          <h3>Roast Quality</h3>
+          <p>Want better roasts from the AI?</p>
+          <ul>
+            <li>Take clear, well-lit photos of your food</li>
+            <li>Include the full dish in frame</li>
+            <li>Avoid blurry or dark images</li>
+            <li>Try different angles for variety</li>
+          </ul>
+        </div>
+
+        <div class="support-card">
+          <i class="fas fa-ad"></i>
+          <h3>Ads & Privacy</h3>
+          <p>Information about ads and your data</p>
+          <ul>
+            <li>Ads help keep the app free</li>
+            <li>Opt out of personalized ads in device settings</li>
+            <li>Read our <a href="hellplate-privacy.html" style="color: #ff6b35;">Privacy Policy</a></li>
+            <li>Your photos are not stored permanently</li>
+          </ul>
+        </div>
+
+        <div class="support-card">
+          <i class="fas fa-history"></i>
+          <h3>Roast History</h3>
+          <p>Access your past roasts and scores</p>
+          <ul>
+            <li>View all your previous roasts in the app</li>
+            <li>History is saved to your anonymous account</li>
+            <li>Request deletion anytime via support</li>
+            <li>Data syncs across app sessions</li>
+          </ul>
+        </div>
+
+        <div class="support-card">
+          <i class="fas fa-bug"></i>
+          <h3>Technical Issues</h3>
+          <p>App crashes or not working properly?</p>
+          <ul>
+            <li>Update to the latest version</li>
+            <li>Restart the app and your device</li>
+            <li>Clear app cache in device settings</li>
+            <li>Report bugs using the form below</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>Contact Support</h2>
+        <p>Can't find what you're looking for? Send us a message and we'll get back to you as soon as possible.</p>
+        
+        <form action="https://formspree.io/f/xkgdlbbo" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name">
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+          </div>
+          
+          <div class="form-group">
+            <label for="issue-type">Issue Type</label>
+            <select id="issue-type" name="issue_type" required>
+              <option value="">Select an issue type</option>
+              <option value="Photo/Camera Issues">Photo/Camera Issues</option>
+              <option value="Credits/Purchase Problems">Credits/Purchase Problems</option>
+              <option value="Roast Quality">Roast Quality Feedback</option>
+              <option value="Technical Bug">Technical Bug</option>
+              <option value="Account/Data">Account/Data Request</option>
+              <option value="Privacy Concern">Privacy Concern</option>
+              <option value="Feature Request">Feature Request</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="device">Device Information (Optional)</label>
+            <input type="text" id="device" name="device" placeholder="e.g., Samsung Galaxy S21, Android 13">
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Please describe your issue or question in detail..."></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-paper-plane"></i>
+            Send Support Request
+          </button>
+        </form>
+      </div>
+
+      <div class="content-section" style="margin-top: 40px; text-align: center;">
+        <h3>Additional Resources</h3>
+        <p>Check out these helpful links:</p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
+          <a href="hellplate-privacy.html" class="btn btn-secondary">
+            <i class="fas fa-shield-alt"></i>
+            Privacy Policy
+          </a>
+          <a href="mailto:privacy@pivotalpoint.io" class="btn btn-secondary">
+            <i class="fas fa-envelope"></i>
+            Email Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="support.html"><i class="fas fa-life-ring" style="margin-right: 5px;"></i>Support</a>
+        <a href="privacy.html"><i class="fas fa-shield-alt" style="margin-right: 5px;"></i>Privacy Policy</a>
+        <a href="copyright.html"><i class="fas fa-copyright" style="margin-right: 5px;"></i>Copyright</a>
+      </div>
+      <p>&copy; 2025 PivotalPoint.io. All rights reserved.</p>
+      <p style="margin-top: 10px; opacity: 0.7;">Turning AI chaos into sustainable growth.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
